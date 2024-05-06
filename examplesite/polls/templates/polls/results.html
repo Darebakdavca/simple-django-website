@@ -1,0 +1,20 @@
+{% extends 'welcome/base.html' %}
+{% load static %}
+
+{% block content %}
+<body class="bg-green-100 h-screen flex justify-center">
+    {% include 'polls/partials/return_to_index.html' %}
+        <div class="flex flex-col justify-center">
+            <div class="bg-green-200 rounded-md px-3 py-1 ">
+                <h1 class="border-b-4 border-green-300">{{ question.question_text }}</h1>
+                <ul class="bg-green-300 mt-3 mb-2 rounded-md">
+                {% for choice in question.choice_set.all %}
+                    <li class="px-2 py-1">{{ choice.choice_text }}: <strong>{{ choice.votes }}</strong> vote{{ choice.votes|pluralize }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            <button class=""><a class="block bg-green-300 rounded-md mt-3 px-5 py-1 w-full hover:bg-green-400 hover:cursor-pointer" href="{% url 'polls:index' %}">Vote again?</a></button>    
+        </div>
+                
+</body>
+{% endblock content %}

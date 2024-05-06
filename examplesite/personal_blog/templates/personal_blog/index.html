@@ -1,0 +1,15 @@
+{% extends 'welcome/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<body class="bg-yellow-200 h-full w-full">
+  
+{% include 'personal_blog/partials/navbar.html' %}
+  <div class=" h-full flex justify-center content-center">
+    <main class="h-[80vh] w-1/2 flex-col justify-center content-center" >{% block main %}{% endblock %}</main>
+  </div>
+{% include 'personal_blog/partials/footer.html' %}
+</body>
+{% endblock content %}
+

@@ -1,0 +1,5 @@
+spuštění tailwindcss:
+tailwindcss -i examplesite/welcome/static/welcome/css/input.css -o examplesite/welcome/static/welcome/css/output.css --watch
+
+spuštění djanga:
+python3 examplesite/manage.py runserver

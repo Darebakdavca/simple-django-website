@@ -1,0 +1,25 @@
+{% extends 'welcome/base.html' %}
+{% load static %}
+
+{% block content %}
+<body class="bg-green-100 h-screen flex justify-center">
+{% include 'polls/partials/return_to_index.html' %}
+    <div class="flex flex-col justify-center">
+        <h1 class="border-b-4 pb-1 border-green-200">Please choose a question to vote on:</h1>
+    {% if latest_question_list %}
+        <ul class="bg-green-200 px-3 py-3 mt-3 rounded-md">
+        {% for question in latest_question_list %}
+            <li class="">
+                <a href="{% url 'polls:detail' question.id %}" class="hover:bg-green-300 px-5 py-3 rounded-md block">
+                {{ question.question_text }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}    
+    </div>
+</body>
+{% endblock content %}
+

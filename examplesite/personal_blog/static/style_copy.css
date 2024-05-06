@@ -1,0 +1,138 @@
+html {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 40px;
+  text-shadow: 2px 2px 3px rgb(200, 200, 200);
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+/*box class for nav creation*/
+
+
+.box a {
+  flex: 1;
+  background-color: inherit;
+  margin: auto;
+  padding: 10px;
+  align-items: center;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+}
+
+/*navigation buttons*/
+.box a:hover {
+  background-color: rgb(236, 236, 236);
+}
+.box a:active {
+  background-color: rgb(203, 203, 203);
+}
+#main-title-of-page {
+  padding-left: 60px;
+}
+#nav-bar {
+  display: flex;
+  gap: 7px;
+  padding-right: 60px;
+}
+
+/*top navigation*/
+header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin: 0px;
+  overflow-y: hidden;
+  height: 100px;
+
+  box-shadow: rgb(164, 163, 163) 0.5px 0px 40px 0.1px;
+}
+
+header a:link, header a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+
+/*main*/
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  height: calc(100vh - 180px);
+  overflow-y: scroll;
+}
+
+/*links*/
+a {
+  color: rgb(25, 101, 234);
+}
+
+a:hover {
+  color:rgb(5, 210, 247)
+}
+
+a:visited {
+  color: rgb(25, 101, 234);
+}
+
+a[href^="http"] {
+  background: url(/static/icons/external-link-52.png) no-repeat 100% 0;
+  background-size: 1.5rem;
+  padding-right: 30px;
+  color: black;
+}
+
+a[href^="documents"] {
+  background: url(/static/icons/icons8-download-24.png) no-repeat 100% 0;
+  background-size: 14px;
+  padding-right: 15px;
+}
+
+/*list*/
+#socials {
+  font-size: 1.5em;
+  list-style: none;
+}
+
+#socials li {
+  display: inline;
+  margin-right: 25px;
+}
+
+
+/*footer*/
+footer {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  bottom: 0px;
+  margin: 0px;
+  box-shadow: rgb(164, 163, 163) 0.5px 0px 40px 0.1px;
+}

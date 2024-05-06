@@ -1,0 +1,17 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US" class="text-2xl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="David Brablc">
+    <meta name="description" content="The page provides an overview of the authors information, such as the CV, Social sites and Contact information">
+    <title>David Brablc</title>
+    <link rel="icon" href="{% static 'icons/Frame3.png' %}" type="image/x-icon">
+    <link href="{% static 'welcome/css/output.css' %}" rel="stylesheet">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+  </head>
+  {% block content %}{% endblock %}
+</html>

@@ -1,0 +1,12 @@
+{% extends 'personal_blog/index.html' %}
+{% load static %}
+{% block main %}
+<div class="text-center border-b-4 border-orange-300 pb-2">
+    <h2 class="text-gray-600 text-xl">CV</h2>
+</div>
+    <div class="text-white bg-orange-400 rounded-md p-3 mt-4 text-center min-h-32 flex flex-col justify-center">
+        <p class="text">
+            You can download my Curriculum Vitae Word document <a href="{% static 'documents/cv.pdf' %}" rel="CV" title="Curriculum Vitae - David Brablc.docx" download="Curriculum Vitae - David Brablc"> <strong><u>here</u></strong></a>.
+        </p>    
+    </div>
+{% endblock %}
